@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Wasm Demo</title>
+</head>
+<body>
+    <script type="module">
+        import init, { add, greet } from './pkg/handson_wasm_rust.js';
+
+        async function run() {
+            await init();
+            
+            // 関数のテスト
+            console.log(add(5, 3));  // 8
+            console.log(greet("Wasm")); // "Hello, Wasm!"
+        }
+
+        run();
+    </script>
+</body>
+</html>
